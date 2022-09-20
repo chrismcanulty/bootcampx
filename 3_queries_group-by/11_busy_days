@@ -1,0 +1,5 @@
+SELECT day, count(id) AS assignment_by_day
+FROM assignment
+GROUP BY day
+HAVING count(id) >= 10
+ORDER BY day;
