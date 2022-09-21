@@ -1,0 +1,5 @@
+SELECT assignment.id, assignment.day, assignment.chapter, assignment.name, COUNT(assistance_requests.id) AS total_requests
+FROM assignment
+JOIN assistance_requests ON assignment_id = assignment.id
+GROUP BY assignment.id
+ORDER BY total_requests DESC;
